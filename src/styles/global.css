@@ -1,0 +1,63 @@
+:root { --sidebar-width: 250px; }
+body { background-color: #f8f9fa; color: #212529; }
+.landing-hero {
+  background: linear-gradient(135deg, #eef4ff 0%, #f8f9fa 55%, #ffffff 100%);
+  border: 1px solid #dbe6ff;
+}
+.layout-shell {
+  overflow-x: hidden;
+}
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  min-height: 100vh;
+  flex: 0 0 var(--sidebar-width);
+}
+.app-main-wrap {
+  min-width: 0;
+}
+.dashboard-header h1 {
+  font-weight: 700;
+}
+.dashboard-stat-card .card-body {
+  padding: 1rem 1.1rem;
+}
+.dashboard-chart-card .card-body {
+  min-height: 320px;
+}
+.dashboard-timeline-wrap .card {
+  min-height: 670px;
+}
+.nav-hover:hover { background-color: rgba(255, 255, 255, 0.15); }
+.skeleton { background: linear-gradient(90deg, #e9ecef 25%, #f1f3f5 50%, #e9ecef 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite linear; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.counter-value { animation: pulse 0.7s ease-in-out; }
+@keyframes pulse { from { transform: scale(0.95); opacity: 0.6; } to { transform: scale(1); opacity: 1; } }
+.task-card { cursor: pointer; }
+.kanban-column { min-height: 380px; }
+.min-height-300 { min-height: 300px; }
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1040;
+}
+@media (max-width: 991px) {
+  .sidebar {
+    position: fixed;
+    left: calc(-1 * var(--sidebar-width));
+    top: 0;
+    bottom: 0;
+    z-index: 1050;
+    transition: left 0.25s ease;
+    overflow-y: auto;
+  }
+  .sidebar.sidebar-open {
+    left: 0;
+  }
+  .dashboard-chart-card .card-body,
+  .dashboard-timeline-wrap .card {
+    min-height: auto;
+  }
+}

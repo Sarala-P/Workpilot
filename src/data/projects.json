@@ -1,0 +1,45 @@
+[
+  {
+    "id": 101,
+    "name": "Fallback Product Launch",
+    "teamMembers": [
+      1,
+      2,
+      3
+    ],
+    "tasks": [
+      {
+        "id": 901,
+        "title": "Define launch timeline",
+        "description": "Prepare major milestones for launch.",
+        "assignedTo": 1,
+        "priority": "High",
+        "status": "In Progress",
+        "dueDate": "2026-06-15",
+        "comments": [
+          "Waiting for stakeholder signoff"
+        ]
+      },
+      {
+        "id": 902,
+        "title": "Create campaign assets",
+        "description": "Design social and email assets for launch week.",
+        "assignedTo": 2,
+        "priority": "Medium",
+        "status": "Backlog",
+        "dueDate": "2026-06-20",
+        "comments": []
+      },
+      {
+        "id": 903,
+        "title": "Release readiness checklist",
+        "description": "Validate testing, docs and support handover.",
+        "assignedTo": 3,
+        "priority": "Low",
+        "status": "Review",
+        "dueDate": "2026-06-25",
+        "comments": []
+      }
+    ]
+  }
+]
